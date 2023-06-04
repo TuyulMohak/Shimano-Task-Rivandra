@@ -9,6 +9,9 @@ PT Shimano
 This system not include any registration, it's handled by admin to add
 and delete or update user, and assigning them to specific group.
 
+first to seed the database, run the following command.
+`dotnet run seeddata`
+
 **User**
 
 **User** table contain all **Users** and the **Group** they're assigned
@@ -30,41 +33,36 @@ every table here (Create, Read, Update, and Delete), except deleting his
 own account. Every other **Group** can access only **Menu(s)** assigned
 to them.
 
-  -----------------------------------------------------------------------
-  **GroupId**                   **GroupName**
-  ----------------------------- -----------------------------------------
-  1                             admin
 
-  2                             sales
-
-  3                             production
-  -----------------------------------------------------------------------
+| **GroupId**  | **GroupName** | 
+| :---        |     :---:     |
+| 1           |    admin    |      
+| 2           |      sales       |       
+| 3           |      production   |       
 
 **Menu**
 
 **Menu** table contains every **Menus** that will be assigned to
 **Group(s)**.
 
-  -----------------------------------------------------------------------
-  **MenuId**              **MenuName**
-  ----------------------- -----------------------------------------------
-  1                       Production Data
 
-  2                       Sales Data
+| **MenuId**  | **MenuName** | 
+| :---        |     :---:     |
+| 1           |    Production Data    |      
+| 2           |      sales Data       |       
+| 3           |      Demand Data   |     
 
-  3                       production
-  -----------------------------------------------------------------------
-
-**Group_Access**
+**Group_Access** or **GroupMenu**
 
 **Group_Access** table, contains the actual assignment for **Groups.**
 
-  -----------------------------------------------------------------------
-  **GroupId**                        **MenuId**
-  ---------------------------------- ------------------------------------
-  3                                  1
+| **GroupId**  | **MenuId** | 
+| :---        |     :---:     |
+| 3           |    1    |      
+| 3           |      3       |       
+| 2           |     2   |     
 
-  3                                  3
 
-  2                                  2
-  -----------------------------------------------------------------------
+The task is unfinised and the times is up.
+Thank's for your attention. 
+Muhammad Rivandra
