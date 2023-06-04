@@ -2,8 +2,7 @@
 
 PT Shimano
 
-![https://mzukluqcon.us-07.visual-paradigm.com/rest/diagrams/projects/clipboard/1_jDlSPhGFYDwCJBWz?dummy=NkkoPhGE2e2oLwCd](vertopal_a6923c4237d54f4fb0034ec3645c5a76/media/image1.png){width="5.311713692038495in"
-height="3.3278280839895014in"}
+![https://mzukluqcon.us-07.visual-paradigm.com/rest/diagrams/projects/clipboard/1_jDlSPhGFYDwCJBWz?dummy=NkkoPhGE2e2oLwCd](vertopal_a6923c4237d54f4fb0034ec3645c5a76/media/image1.png)
 
 **Introduction**
 
@@ -15,17 +14,14 @@ and delete or update user, and assigning them to specific group.
 **User** table contain all **Users** and the **Group** they're assigned
 to.
 
-  ------------------------------------------------------------------------
-  **UserId**    **UserName**        **Password**          **GroupId**
-  ------------- ------------------- --------------------- ----------------
-  1             Admin123            \[encrypted\]         1
+| **UserId**  | **UserName** | **Password**           | **GroupId** |
+| :---        |     :---:      |          ---:        | ---:      |
+| 1           |    Admin123      |       .encrypted.  | 1      |
+| 2           |      Mark       |        .encrypted.  | 2     |
+| 3           |      John       |        .encrypted.  | 2     |
+| 4           |      Oliver       |        .encrypted.  | 3     |
 
-  2             Mark                \[encrypted\]         2
-
-  3             John                \[encrypted\]         2
-
-  4             Oliver              \[encrypted\]         3
-  ------------------------------------------------------------------------
+  
 
 **Group**
 
