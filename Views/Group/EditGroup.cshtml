@@ -1,0 +1,22 @@
+@model ShimanoTask.Controllers.GroupFormat;
+
+@{
+    
+}
+
+<div class="text-left">
+    <h1>Edit Group</h1>
+    <form asp-action="EditGroup" asp-controller="Group" method="post">
+      <div class="form-group">
+        
+        <label type="hidden" readonly type="form-control" asp-for="GroupId">GroupId</label>
+        <input type="hidden" readonly value="@ViewBag.Group.GroupId" asp-for="GroupId" type="text" class="form-control" id="GroupId" aria-describedby="GroupId" placeholder="Enter GroupId ... ">
+
+        <label asp-for="GroupName">GroupName</label>
+        <input value="@ViewBag.Group.GroupName" asp-for="GroupName" type="text" class="form-control" id="GroupName" aria-describedby="GroupName" placeholder="Enter GroupName ... ">
+
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/Group">All Groups</a>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+@model ShimanoTask.Controllers.GroupFormat;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+    <h1>Add Group</h1>
+    <form asp-action="AddGroup" asp-controller="Group" method="post">
+      
+      <div class="form-group">  
+        <label asp-for="GroupName">GroupName</label>
+        <input asp-for="GroupName" type="text" class="form-control" id="GroupName" aria-describedby="GroupName" placeholder="Enter GroupName ... ">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/User">All Users</a>
+    </form>
+</div>

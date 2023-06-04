@@ -1,0 +1,12 @@
+@* @model ShimanoTask.Controllers.AccountFormat; *@
+
+@{
+
+}
+
+<div class="text-left">
+    <h1>All Groups</h1>
+    @foreach(var group in Model) {
+      <div><a href="/Home/Menus?id=@group.GroupId"> @group.GroupName </a></div>
+    }
+</div>

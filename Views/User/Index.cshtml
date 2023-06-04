@@ -1,0 +1,30 @@
+@model IEnumerable<ShimanoTask.Models.User>;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+    <h1>Users Data</h1>
+
+    <a class="btn btn-primary" href="/User/AddUser">Add User</a>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>EncryptedPassword</th>
+            <th>Group</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var user in Model){
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Password</td>
+                <td>@user.Group.GroupName</td>
+
+                <td>
+                    <a class="btn btn-warning" href="/User/EditUser?id=@user.UserId">Edit</a> 
+                    <a class="btn btn-danger" href="/User/DeleteUser?id=@user.UserId">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>

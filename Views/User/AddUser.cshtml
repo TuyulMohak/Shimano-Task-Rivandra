@@ -1,0 +1,24 @@
+@model ShimanoTask.Controllers.UserFormat;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+    <h1>Add User</h1>
+    <form asp-action="AddUser" asp-controller="User" method="post">
+      <div class="form-group">
+        <label asp-for="UserName">UserName</label>
+        <input asp-for="UserName" type="text" class="form-control" id="UserName" aria-describedby="UserName" placeholder="Enter UserName ... ">
+
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" type="text" class="form-control" id="Password" aria-describedby="Password" placeholder="Enter Password ... ">
+
+        <label asp-for="GroupId" >Select Group</label>
+        <select class="custom-select" asp-for="GroupId" asp-items="ViewBag.GroupOptions"></select>
+
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/User">All Users</a>
+    </form>
+</div>

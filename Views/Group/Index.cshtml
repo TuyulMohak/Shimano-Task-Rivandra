@@ -1,0 +1,28 @@
+@model IEnumerable<ShimanoTask.Models.Group>;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+    <h1>Groups Data</h1>
+
+    <a class="btn btn-primary" href="/Group/AddGroup">Add Group</a>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Group</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var Group in Model){
+            <tr>
+                <td>@Group.GroupId</td>
+                <td>@Group.GroupName</td>
+
+                <td>
+                    <a class="btn btn-warning" href="/Group/EditGroup?id=@Group.GroupId">Edit</a> 
+                    <a class="btn btn-danger" href="/Group/DeleteGroup?id=@Group.GroupId">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>
